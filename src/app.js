@@ -29,13 +29,13 @@ window.onload = function() {
 
   // Creo una variable texto o string donde guardo el contenido
 
-  let domainText = "<ul class="list-group">";
+  let domainText = '<ul class="list-group">';
   for (const i in pronoun) {
     for (const j in adj) {
       for (const k in noun) {
         for (const l in ext) {
           // Tercero, juntar esos datos random en una línea
-          domainText += `<li>${pronoun[i]}${adj[j]}${noun[k]}${ext[l]} </li>`;
+          domainText += `<li class="list-group-item">${pronoun[i]}${adj[j]}${noun[k]}${ext[l]} </li>`;
         }
       }
     }
