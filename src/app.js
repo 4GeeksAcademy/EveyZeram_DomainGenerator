@@ -11,6 +11,7 @@ window.onload = function() {
   let pronoun = ["the", "our"];
   let adj = ["great", "big"];
   let noun = ["jogger", "racoon"];
+  let ext = [".com", ".es"];
 
   // Segundo, necesito que me extraiga un dato de cada una de esas variable de forma aleatoria.
   //Recorro el array pronoun con un for y extraigo un elemento.
@@ -28,17 +29,14 @@ window.onload = function() {
 
   // Creo una variable texto o string donde guardo el contenido
 
-  let domainText = '<ul class="list-group">';
+  let domainText = "<ul class="list-group">";
   for (const i in pronoun) {
     for (const j in adj) {
       for (const k in noun) {
-        // Tercero, juntar esos datos random en una línea
-        domainText +=
-          '<li class="list-group-item">' +
-          pronoun[i] +
-          adj[j] +
-          noun[k] +
-          ".com</li>";
+        for (const l in ext) {
+          // Tercero, juntar esos datos random en una línea
+          domainText += `<li>${pronoun[i]}${adj[j]}${noun[k]}${ext[l]} </li>`;
+        }
       }
     }
   }
@@ -48,5 +46,5 @@ window.onload = function() {
   let domainGeneratorHTML = document.querySelector("#generadordominios");
   // Asignar al innerhtml el resultado de todos los dominios
   domainGeneratorHTML.innerHTML = domainText;
-  console.log("Hello Rigo from the console!");
+  console.log("Hola");
 };
